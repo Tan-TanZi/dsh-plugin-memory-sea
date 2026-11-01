@@ -273,9 +273,17 @@ docs/           技术文档
 
 ## 致谢
 
-- [three.js](https://threejs.org/) — 渲染
-- [d3-force-3d](https://github.com/vasturiano/d3-force-3d) — 力导向布局
-- 灵感来自 [3d-memory-sea](https://github.com/asdfd3r/3d-memory-sea) 的原始想法
+星系观感不是凭空调出来的参数，它建立在下面这些工作上：
+
+- [galaxy-view](https://github.com/Longwind1984/galaxy-view)（MIT）— **星系力模型**。
+  `src/galaxyForces.js` 里的径向核心引力与切向旋臂力移植自该项目的
+  `src/layout/galaxyForces.ts`，公式与量纲保持一致。这是「致密亮核 + 对数旋臂」的来源；
+  去掉它，布局会退化成一团均匀的球。
+- [three.js](https://threejs.org/)（MIT）— 渲染
+- [d3-force-3d](https://github.com/vasturiano/d3-force-3d)（ISC）— 力导向积分器
+- [3d-memory-sea](https://github.com/asdfd3r/3d-memory-sea) — 最初的灵感来源
+
+完整的第三方代码与许可清单见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
 
 ---
 
