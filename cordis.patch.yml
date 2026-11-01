@@ -1,0 +1,13 @@
+# dsh-plugin-memory-sea bundle patch
+#
+# 纯客户端可视化插件：
+#   · 浏览器半侧往 shell.overlay 注册一个浮动入口，点开是全屏三维记忆海
+#   · 服务端只挂一个空壳入口，不注入 systemPrompt / tools，不影响对话
+#
+# ① 阶段：数据是内联的静态场景，不读会话；② 阶段再接 ctx.conversation。
+#
+# 注意：name 必须与 package.json 的 name 完全一致，否则行无法解析。
+
+- insert:
+    - id: dsh-plugin-memory-sea
+      name: dsh-plugin-memory-sea

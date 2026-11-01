@@ -1,0 +1,75 @@
+{
+  "name": "dsh-plugin-memory-sea",
+  "version": "0.3.0",
+  "description": "DeepSeek Harness 插件：把全部对话画成一片可以游进去的三维星海 —— 每一轮对话是一颗星，点一下就能从会话钻到具体那条消息。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "memory",
+    "visualization",
+    "threejs",
+    "webgl",
+    "force-graph",
+    "3d"
+  ],
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tan-TanZi/dsh-plugin-memory-sea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tan-TanZi/dsh-plugin-memory-sea/issues"
+  },
+  "homepage": "https://github.com/Tan-TanZi/dsh-plugin-memory-sea#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "deploy": "node build.mjs && node deploy.mjs",
+    "check": "node tools/audit-features.mjs && node tools/check-wiring.mjs && node tools/verify-layout.mjs && node tools/test-interact.mjs",
+    "check:build": "node tools/verify-inject.mjs",
+    "prepublish:check": "node tools/prepublish.mjs publish/dsh-plugin-memory-sea"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "devDependencies": {
+    "three": "0.184.0",
+    "d3-force-3d": "3.0.6",
+    "esbuild": "0.25.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "version": "0.3.0"
+  }
+}
