@@ -17,7 +17,7 @@ DSH（DeepSeek Harness）插件 · WebGL / three.js · 只读，不碰你的对�
 
 <img src="assets/2.jpg" alt="2" style="zoom:33%;" />
 
-<video src="[assets/Video.mp4](https://github.com/user-attachments/assets/a9409084-4cef-42f7-b41a-93ac77f1fee9)" controls=""></video>
+<video src="https://github.com/user-attachments/assets/a9409084-4cef-42f7-b41a-93ac77f1fee9" controls=""></video>
 
 
 - **点会话星** → 深探，把整棵树展开到每一条消息
